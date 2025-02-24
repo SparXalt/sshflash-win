@@ -275,7 +275,7 @@ IF /I %action% == "dump" (
   %SSH% "dd if=/dev/mtdblock3 of=/tmp/dump.bin"
   echo .
   echo Copying ROM to Windows PC
-  scp root@169.254.8.1:/tmp/dump.bin .\dump%timestamp%.bin
+  scp -O root@169.254.8.1:/tmp/dump.bin .\dump%timestamp%.bin
   echo .
   echo File created: 
   echo dump%timestamp%.bin
